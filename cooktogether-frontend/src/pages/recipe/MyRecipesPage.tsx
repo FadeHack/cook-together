@@ -32,25 +32,24 @@ export default function MyRecipesPage() {
   }, []);
 
   return (
-    // KEY CHANGE: The outer container now handles the page's scrolling
-    // within the MainLayout provided space.
+    
     <div className="h-full overflow-y-auto">
-      {/* The inner container handles padding and content layout */}
+      
       <div className="container mx-auto p-4 md:p-8">
         <div className="text-center mb-8">
-          {/* Responsive typography */}
+        
           <h1 className="text-3xl md:text-4xl font-bold tracking-tight">My Recipes</h1>
           <p className="text-muted-foreground mt-2">The delicious creations you've shared with the community.</p>
         </div>
 
         {error && <p className="text-center text-destructive">{error}</p>}
 
-        {/* The grid is already responsive, which is great! */}
+       
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {isLoading
-            ? // Show a reasonable number of skeletons
+            ? 
               Array.from({ length: 8 }).map((_, i) => <RecipeCardSkeleton key={i} />)
-            : // BUG FIX: Use recipe._id for the key
+            : 
               myRecipes.map((recipe) => <RecipeCard key={recipe.id} recipe={recipe} />)}
         </div>
 

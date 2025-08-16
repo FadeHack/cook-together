@@ -12,7 +12,7 @@ import { Input } from '@/components/ui/input';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { BlurFade } from '@/components/magicui/blur-fade';
 
-// Define the initial state for our filters
+// initial state for our filters
 const initialFilters: RecipeFilters = {
   search: '',
   minRating: 0,
@@ -30,7 +30,7 @@ export default function HomePage() {
 
   const debouncedFilters = useDebounce(filters, 500);
 
-  // This useEffect hook for fetching data remains the same
+
   useEffect(() => {
     const fetchFilteredRecipes = () => {
       const activeFilters: Record<string, any> = {
@@ -91,10 +91,10 @@ export default function HomePage() {
           </div>
         </div>
         
-        {/* --- KEY CHANGE: This is now a UNIVERSAL Sort/Info Bar --- */}
-        {/* It stacks vertically on mobile and becomes a row on larger screens */}
+
+        
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
-          {/* Hide results count on the very smallest screens for more space */}
+         
           <p className="hidden sm:block text-sm text-muted-foreground order-last sm:order-first">
             {!isLoading && `Showing ${recipes.length} of ${pagination.totalResults} recipes`}
           </p>

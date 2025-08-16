@@ -9,13 +9,13 @@ import {
   BookmarkCheck,
   ImageOff,
   User,
-  Flame, // New icon
-  Footprints, // New icon
+  Flame, 
+  Footprints, 
 } from 'lucide-react';
 import { StarRating } from '@/components/shared/StarRating';
 import { Button } from '@/components/ui/button';
 import { rateRecipe, saveRecipe, unsaveRecipe } from '@/services/recipe.service';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'; // Import Card components
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'; 
 
 export default function RecipeDetailPage() {
   const { recipeId } = useParams<{ recipeId: string }>();
@@ -38,7 +38,7 @@ export default function RecipeDetailPage() {
     if (!recipeId) return;
     try {
       await rateRecipe(recipeId, rating);
-      fetchRecipeById(recipeId); // Re-fetch to show updated rating
+      fetchRecipeById(recipeId); 
     } catch (error) {
       console.error("Failed to submit rating:", error);
     }
@@ -91,7 +91,7 @@ export default function RecipeDetailPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-12">
           {/* --- LEFT (MAIN) COLUMN --- */}
           <main className="lg:col-span-2">
-            {/* Image */}
+           
             <div className="aspect-video w-full bg-secondary rounded-lg mb-8 overflow-hidden shadow-lg">
               {selectedRecipe.imageUrl ? (
                 <img src={selectedRecipe.imageUrl} alt={selectedRecipe.title} className="h-full w-full object-cover" />

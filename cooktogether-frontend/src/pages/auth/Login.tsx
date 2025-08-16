@@ -5,7 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { Link, useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { Eye, EyeOff } from 'lucide-react'; // 1. Import icons
+import { Eye, EyeOff } from 'lucide-react'; 
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
@@ -85,7 +85,6 @@ export default function LoginPage() {
                 </FormItem>
               )}
             />
-            {/* 3. KEY CHANGE: Password field with visibility toggle */}
             <FormField
               control={form.control}
               name="password"

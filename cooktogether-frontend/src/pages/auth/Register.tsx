@@ -110,7 +110,7 @@ export default function RegisterPage() {
                 </FormItem>
               )}
             />
-            {/* 5. KEY CHANGE: Password field with visibility toggle */}
+
             <FormField
               control={form.control}
               name="password"
@@ -133,7 +133,6 @@ export default function RegisterPage() {
                 </FormItem>
               )}
             />
-            {/* 6. KEY CHANGE: Add Confirm Password field */}
             <FormField
               control={form.control}
               name="confirmPassword"

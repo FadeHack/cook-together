@@ -2,7 +2,6 @@
 
 import { createContext, useContext, useEffect, useState } from "react";
 
-// 1. KEY CHANGE: The Theme type is now simpler.
 type Theme = "dark" | "light";
 
 type ThemeProviderProps = {
@@ -14,13 +13,12 @@ type ThemeProviderProps = {
 type ThemeProviderState = {
   theme: Theme;
   setTheme: (theme: Theme) => void;
-  // We can add a toggle function for convenience
   toggleTheme: () => void;
 };
 
-// 2. KEY CHANGE: Update the initial state.
+
 const initialState: ThemeProviderState = {
-  theme: "dark", // A sensible default
+  theme: "dark", 
   setTheme: () => null,
   toggleTheme: () => null,
 };
@@ -29,7 +27,7 @@ const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
 
 export function ThemeProvider({
   children,
-  defaultTheme = "dark", // Default to dark theme
+  defaultTheme = "dark", 
   storageKey = "vite-ui-theme",
   ...props
 }: ThemeProviderProps) {
@@ -43,8 +41,6 @@ export function ThemeProvider({
     root.classList.remove("light", "dark");
     root.classList.add(theme);
 
-    // 3. KEY CHANGE: The entire `if (theme === "system")` block is removed.
-    // The logic is now much simpler.
   }, [theme]);
 
   const value = {

@@ -1,6 +1,6 @@
 const httpStatus = require('http-status');
 const catchAsync = require('../utils/catchAsync');
-const { userService, roleService, emailService } = require('../services');
+const { userService, roleService } = require('../services');
 const admin = require('../config/firebase');
 const { defaultRole } = require('../config/roles');
 const ApiError = require('../utils/ApiError');
@@ -33,8 +33,6 @@ const register = catchAsync(async (req, res) => {
   
   const user = await userService.createUser(userCreateBody);
   
-  // Send welcome email
-  // await emailService.sendWelcomeEmail(email, username);
   
   res.status(httpStatus.CREATED).send({ user });
 });

@@ -44,7 +44,7 @@ function App() {
 
     // Cleanup subscription on unmount
     return () => unsubscribe();
-  }, [setUser, setSavedRecipes]); // Re-run effect if setUser function changes (it won't, but it's good practice)
+  }, [setUser, setSavedRecipes]);
 
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">

@@ -25,7 +25,6 @@ export const AppRouter = () => {
         <Route path="/register" element={<RegisterPage />} />
 
         {/* --- Protected Routes --- */}
-        {/* The PrivateRoutes guard now simply protects a group of child routes */}
         <Route element={<PrivateRoutes />}>
           <Route path="/home" element={<HomePage />} />
           <Route path="/recipe/:recipeId" element={<RecipeDetailPage />} />
