@@ -180,5 +180,5 @@ You will need the following software installed on your machine:
     ```
     The application will be available at `http://localhost:5173` (or another port if 5173 is in use).
 
-# Licence
+### Licence
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
