@@ -13,7 +13,7 @@ This project was built from the ground up to solve the problem of a growing cook
 - [Screenshots](#screenshots)
   - [Light & Dark Mode](#light--dark-mode)
   - [Landing Page](#landing-page)
-- [Login/Register Page](#loginregister-page)
+  - [Login/Register Page](#loginregister-page)
   - [Home Page (Recipe Feed)](#home-page-recipe-feed)
   - [Recipe Detail Page](#recipe-detail-page)
   - [My Recipes Page](#my-recipes-page)
